@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  
+}
+
+:root {
+  --ver-claro: #b1f0dc;
+  --ver-oscuro: #344d67;
+  --ver-claro-transp: #b1f0dc;
+  --blanco: #f5f5f5;
+}
+
+body{
+  background-image: url(./img/rickymorty.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position:  center 0;
+  height: 100vh;
+  font-family: 'Raleway' ;
+}
+
+.col-pal{
+  color: var(--ver-oscuro);
+}
+
+.cont-home{
+  width: 60%;
+  margin:  5rem auto;
+}
+
+.boton-home button{
+  background-color: var(--ver-oscuro) ;
+  color: var(--ver-claro);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.boton-home button:hover{
+  background-color: var(--ver-claro-transp) ;
+  color: var(--ver-oscuro);
+}
+
+@media (max-width:678px) {
+  .display-col{
+    flex-direction: column;
+  }
+}
