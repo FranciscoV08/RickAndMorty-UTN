@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Characters } from "./pages/Characters";
+import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 
 function App() {
@@ -6,7 +8,9 @@ function App() {
 
   return (
     <div>
-      <Home />
+      {/* <Home />  */}
+      {/* <Characters/> */}
+      <Contact /> 
     </div>
   );
 }

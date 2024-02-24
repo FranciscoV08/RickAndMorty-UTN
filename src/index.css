@@ -10,15 +10,15 @@
   --blanco: #f5f5f5;
 }
 
-body{
+body {
+  margin: 0;
   background-image: url(./img/rickymorty.jpg);
-
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  /* background-repeat: no-repeat;
 
-  background-position:  center 0;
-  height: 100vh;
-  font-family: 'Raleway' ;
+  height: 100vh;*/
+  font-family: 'Raleway' ; 
 }
 
 .col-pal{
@@ -30,17 +30,7 @@ body{
   margin:  5rem auto;
 }
 
-.boton-home button{
-  background-color: var(--ver-oscuro) ;
-  color: var(--ver-claro);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
-}
-.boton-home button:hover{
-  background-color: var(--ver-claro-transp) ;
-  color: var(--ver-oscuro);
-}
+
 
 @media (max-width:678px) {
   .display-col{

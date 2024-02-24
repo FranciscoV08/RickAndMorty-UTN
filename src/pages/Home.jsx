@@ -1,3 +1,5 @@
+import { Buttom } from "../components/Buttom";
+
 export const Home = () => {
   return (
     <>
@@ -22,8 +24,9 @@ export const Home = () => {
           <h2 className="fw-bold">Lets go!</h2>
 
           <div className=" boton-home d-flex display-col  justify-content-center gap-3 ">
-            <button className=""> Characters</button>
-            <button> Contact </button>
+            <Buttom> Characters </Buttom>
+            <Buttom> Contact </Buttom>
+            
           </div>
         </div>
       </div>

@@ -1,0 +1,17 @@
+:root {
+  --ver-claro: #b1f0dc;
+  --ver-oscuro: #344d67;
+  --ver-claro-transp: #b1f0dc;
+  --blanco: #f5f5f5;
+}
+button{
+    background-color: var(--ver-oscuro) ;
+    color: var(--ver-claro);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+button:hover{
+    background-color: var(--ver-claro-transp) ;
+    color: var(--ver-oscuro);
+}

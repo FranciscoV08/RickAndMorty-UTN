@@ -1,0 +1,15 @@
+header{
+    background-color: #344d67;
+    padding: 2rem;
+    color: #6eccaf;
+}
+.nav-item a{
+    margin: 0 0.1rem;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    color: #6eccaf;
+}
+.active{
+    background-color: #6eccaf;
+    color: #344d67;
+}
