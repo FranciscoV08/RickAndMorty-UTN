@@ -1,0 +1,11 @@
+.style-card{
+    width: 18rem;
+    background-color: #223142;
+    color: #6eccaf;
+}
+
+@media (max-width:678px) {
+    .flexbox{
+        flex-direction: column;
+    }
+}
