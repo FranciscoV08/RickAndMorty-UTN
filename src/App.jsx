@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Characters } from "./pages/Characters";
+import { Characteres } from "./pages/Characteres";
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       {/* <Home />  */}
-      <Characters/>
+      <Characteres/>
       {/* <Contact />  */}
     </div>
   );

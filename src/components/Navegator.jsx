@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navegator.css"
 
 
@@ -11,9 +12,9 @@ export const Navegator = ({valuePage}) => {
       
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Rick and Morty
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,14 +29,14 @@ export const Navegator = ({valuePage}) => {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className={valuePage === "contact" ? "nav-link active " : "nav-link "} aria-current="page" href="#">
+                <Link className={valuePage === "contact" ? "nav-link active " : "nav-link "} aria-current="page" to={'/Contact'}>
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className={valuePage === "characters" ? "nav-link active" : "nav-link"} href="#">
+                <Link className={valuePage === "characters" ? "nav-link active" : "nav-link"} to="/Characteres">
                   Character
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

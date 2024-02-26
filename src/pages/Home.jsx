@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Buttom } from "../components/Buttom";
 
 export const Home = () => {
@@ -24,8 +25,8 @@ export const Home = () => {
           <h2 className="fw-bold">Lets go!</h2>
 
           <div className=" boton-home d-flex display-col  justify-content-center gap-3 ">
-            <Buttom> Characters </Buttom>
-            <Buttom> Contact </Buttom>
+            <Buttom> <Link to={'/Characteres'}> Characters </Link> </Buttom>
+            <Buttom> <Link to={'/Contact'}> Contact </Link> </Buttom>
             
           </div>
         </div>

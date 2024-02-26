@@ -6,37 +6,17 @@ import { useEffect, useState } from "react";
 import './character.css';
 
 
-export const Characters = () => {
-
+export const Characteres = () => {
+  
   const url = "https://rickandmortyapi.com/api/character";
 
   const [characters, setCharacters] = useState([])
 
-
-  // FILTRO
-  const [filtros, setFiltros] = useState({
-    status: false,
-    species: false,
-    gender: false,
-    origin: false,
-  })
-
-  const handleCheckboxChange = (filtro) => {
-    setFiltros((prevFiltros) => ({
-      ...prevFiltros,
-      [filtro]: !prevFiltros[filtro],
-    }));
-  };
-
-  // 
-  switch (filtros) {
-    case filtros.status === true:
-      console.log('Hola')
-      break;
+  const [filtro, setFiltro] = useState(true)
   
-    default:
-      break;
-  }
+  // FILTRO
+ 
+
 
   const { data } = useFetch(url);
   // console.log(data)
@@ -56,29 +36,43 @@ export const Characters = () => {
     }
   }, [data]);
 
+const handleAlive = (e) =>{
+
+  const status = e.target.id;
+  const value = e.target.value;
+
+   const filtercharacter = characters.filter( (item) => item.status === value )
+
+  //  const filtercharacter = characters.filter( (item) => item.gender === "Female" )
+  //  console.log(filtercharacter)
+  setFiltro(filtercharacter)
+  setCharacters([...filtercharacter])
+}
+
+
   return (
     <div>
         <Navegator valuePage={"characters"}/>
         <h1 className="text-center text-white">Characters</h1>
         <section className="d-flex justify-content-between m-3">
           <div className="form-check form-switch px-5 py-2">
-            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={filtros.status} onChange={() => handleCheckboxChange('status')}/>
+            <input className="form-check-input" type="checkbox" role="switch" id="state" value={'Alive'} onChange={(e) => handleAlive(e)} />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Personaje vivo</label>
           </div>
           <div className="form-check form-switch px-5 py-2">
-            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <input className="form-check-input" type="checkbox" role="switch" id="state" value={"Dead"} onChange={(e) => handleAlive(e)} />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Personaje muerto</label>
           </div>
           <div className="form-check form-switch px-5 py-2">
-            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <input className="form-check-input" type="checkbox" role="switch" id="gender" value={"Female"} onChange={(e) => handleAlive(e)} />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Femenino</label>
           </div>
           <div className="form-check form-switch px-5 py-2">
-            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <input className="form-check-input" type="checkbox" role="switch" id="gender" value={"Male"} onChange={(e) => handleAlive(e)} />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Masculino</label>
           </div>
           <div className="form-check form-switch px-5 py-2">
-            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <input className="form-check-input" type="checkbox" role="switch" id="name" value={"unknown"} onChange={(e) => handleAlive(e)} />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Desconocido</label>
           </div>
         </section>
